@@ -1,0 +1,69 @@
+1.
+What type would you choose for the following “numbers”? 
+A person’s telephone number: String
+A person’s height: Byte
+A person’s age: Byte
+A person’s gender (Male, Female, Prefer Not To Answer): Char
+A person’s salary : Double
+A book’s ISBN : String
+A book’s price : Double
+A book’s shipping weight : Double
+A country’s population : Int
+The number of stars in the universe : ulong
+The number of employees in each of the small or medium businesses in the 
+United Kingdom (up to about 50,000 employees per business) : ushort
+
+2.
+What are the difference between value type and reference type variables? What is 
+boxing and unboxing?
+1) Value type directly contain their data/values, have their own copy of data and operation on one cannot effect another, cannot accept NULL value, uses struct or enum to create,
+not collected by garbage collector, and stored in stack memory.
+
+Reference types holds their memory address for this value, two reference variables can reference the same object, and operation on one can effect another, 
+uses Class, interface, or Array to create, can accept null values, collected by garbage collector,CLR which contains GC, and is stored in heap memory.
+
+Boxing converts value type to reference type, while unboxing converts reference type to value type
+
+
+3.
+What is meant by the terms managed resource and unmanaged resource in .NET
+	Managed resources are managed by the Common Language Runtime (CLR), when an object is no longer used, the Garbage Collector cleans it up.
+	Unamanaged resources are resources that are managed outside the CLR, which include the Garbage Collector. Memory management for unmanaged resources is done by the coder.
+4.
+Whats the purpose of Garbage Collector in .NET? 
+The Garbage Collector is an automatic memory manager. It doesn't need to manually release memory and allocates objects on managed heap efficiently.
+
+Controlling Flow and Converting Types
+
+1) What happens when you divide an int variable by 0?
+	A DivideByZero Exception is thrown
+2) What happens when you divide a double variable by 0?
+	No exception is thrown but results in positve infinity, negative infinity or NaN (not a number)
+3) What happens when you overflow an int variable, that is, set it to a value beyond its 
+range? 
+	An overflow exception is thrown in an checked context. In an unchecked context, the non-significant bits are discarded that don't fit the destination type
+4) What is the difference between x = y++; and x = ++y;? 
+	In x = y++, Y is assigned to x then y will increment.
+	In x = ++y, the value of y will be incremented, then the result will assign to x
+5)What is the difference between break, continue, and return when used inside a loop 
+statement? 
+	Break statement ends the entire loop and continunes executing after the loop
+	Continue breaks the current loop and starts a new iteration of the loop
+	Return ends the method call and continues executing after the method call
+6) What are the three parts of a for statement and which of them are required? 
+	For Statement includes the initializor, condition and increment/decrement
+	Condition is required
+7) What is the difference between the = and == operators? 
+	The = is an assignment operator assigns values to variables
+	The == is a comparison operator returns true or false
+8)Does the following statement compile? for ( ; true; ) ;
+	It does compile, only the condition expression is required. Outputs an infinite loop
+9)What does the underscore _ represent in a switch expression? 
+	Represents the default return value
+10)What interface must an object implement to be enumerated over by using the foreach 
+statement? 
+	IEnumerable interface
+	
+	
+	
+	
